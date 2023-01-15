@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="windows-1251">
+    <title>П'ятнашки</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg">
+            <div class="parent">
+                <h2 class="title title_2">МЕРЕЖЕВА ГРА "П'ЯТНАШКИ"</h2>
+                <h2 class="title">Виконав студент групи КІТС-21б: Мостовік Ілля</h2>
+                <div class="child1">
+                    <div class="titleAndButton">
+                        <h1>П'ятнашки</h1>
+                        <button id="game" class="game">Розпочати нову гру</button>
+                        <br>
+                        <br>
+                    </div>
+
+                    <!-- Блок результатів -->
+                    <div id="result" class="result">
+                        Час: <span class="time-text"></span>
+                        Кількість ходів: <span class="move-text"></span>
+                    </div>
+                    <div class="child2">
+                        <!-- Гра -->
+                        <div class="field" id="field"></div>
+                    </div>
+
+                    <!-- Блок вибору складності -->
+                    <div id="difficulty" class="difficulty">
+                        Виберіть складність:
+                        <br>
+                        <input type="radio" name="game-difficulty" id="game-difficulty-one" value='4' checked>
+                        <label for="game-difficulty-one">4x4 (Класична)</label>
+                        <br>
+                        <input type="radio" name="game-difficulty" id="game-difficulty-two" value='5'>
+                        <label for="game-difficulty-two">5x5 (Складніша)</label>
+                        <br>
+                        <input type="radio" name="game-difficulty" id="game-difficulty-three" value='6'>
+                        <label for="game-difficulty-three">6x6 (Найскладніша)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
